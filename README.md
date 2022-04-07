@@ -4,8 +4,6 @@ A Erc 20 token with transfer function between users.
 
 ## Run locally
 
----
-
 Clone the repo
 
 ```
