@@ -1,13 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "hardhat/console.sol";
-
 contract Token {
  string public name = "Api Token";
  string public symbol = "ATN";
 
- uint256 public totalSupply = 1000 * 10 ** 18;
+ uint256 public totalSupply = 1000 * 10**18;
 
  address public owner;
 
@@ -18,9 +16,7 @@ contract Token {
   owner = msg.sender;
  }
 
- function transfer(address to, uint256 amount) external { 
-    console.log("Sender balance is tokens", balances[msg.sender]);
-    console.log("Trying to send tokens to ", amount, to);
+ function transfer(address to, uint256 amount) external {
   // check the minimum balance for transaction
   require(balances[msg.sender] >= amount, "not enough tokens");
 
